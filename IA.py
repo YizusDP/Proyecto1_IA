@@ -1,15 +1,15 @@
 """
 Nombre del programa: P1.py
 Autor: Valdez Guzman Brenda
-Fecha de creaci√≥n: 2024-03-31
+Fecha de creaciÛn: 2024-03-31
 Version: 1.0
 
-Descripci√≥n:
-Este programa realiza el metodo de ucs paso a paso a trav√©s del mapa de Rumania
+DescripciÛn:
+Este programa realiza el metodo de ucs paso a paso a travÈs del mapa de Rumania
 
 Uso:
-Para ejecutar el programa, simplemente ejecuta este archivo Python desde la l√≠nea de comandos.
-Utiliza 1 para la ejecuci√≥n estandar, 2 para otras opciones de ejecucion
+Para ejecutar el programa, simplemente ejecuta este archivo Python desde la lÌnea de comandos.
+Utiliza 1 para la ejecuciÛn estandar, 2 para otras opciones de ejecucion
 
 Requisitos:
 Este programa requiere Python 3.x para ejecutarse.
@@ -22,26 +22,26 @@ import sys          # To finish the execution in the testing mode
 
 class WeightedGraph:
     """
-    Descripci√≥n:
+    DescripciÛn:
     Esta clase representa un grafo ponderado no dirigido.
 
     Atributos:
     - graph: Un diccionario que tiene como llaves la ciudad, y como valores un segundo diccionario.
     Dicho segundo diccionario tiene como llaves los destinos a los que va a partir de dicha ciudad y el peso a dicho destino
 
-    M√©todos:
+    MÈtodos:
     - add_vertex(self, vertex): Agrega un vertice al grafo (al diccionario graph) en caso de no existir previamente
-    - add_edge(elf, source, destination, weight): Agrega una arista al grafo, esto es, el camino entre source y destination, y cu√°nto pesa dicho camino.
+    - add_edge(elf, source, destination, weight): Agrega una arista al grafo, esto es, el camino entre source y destination, y cu·nto pesa dicho camino.
             En un grafo no dirigido, agrega la arista a ambos diccionarios de vertices
     - get_vertices(self): Regresa una lista con todas las llaves (vertices) del diccionario graph
     - get_edges(self): Regresa una lista con todas las tuplas de la forma 'origen,destino,peso' (aristas)
     """
     def __init__(self):
         """
-        Descripci√≥n:
+        DescripciÛn:
         Constructor de la clase WeightedGraph.
 
-        Par√°metros:
+        Par·metros:
         - graph: Un diccionario que tiene como llaves la ciudad, y como valores un segundo diccionario.
         Dicho segundo diccionario tiene como llaves los destinos a los que va a partir de dicha ciudad y el peso a dicho destino
 
@@ -53,11 +53,11 @@ class WeightedGraph:
 
     def add_vertex(self, vertex):
         """
-        Descripci√≥n:
-        Este m√©todo agrega un vertice al grafo en caso de no encontrarse previamente en √©l. Lo hace creando su diccionario
+        DescripciÛn:
+        Este mÈtodo agrega un vertice al grafo en caso de no encontrarse previamente en Èl. Lo hace creando su diccionario
 
-        Par√°metros:
-        - vertex: Una cadena (str) con el nombre del v√©rtice
+        Par·metros:
+        - vertex: Una cadena (str) con el nombre del vÈrtice
         """
 
         if vertex not in self.graph:
@@ -65,12 +65,12 @@ class WeightedGraph:
 
     def add_edge(self, source, destination, weight):
         """
-        Descripci√≥n:
-        Este m√©todo agrega una arista al grafo.
+        DescripciÛn:
+        Este mÈtodo agrega una arista al grafo.
         Para ello, primero agrega ambos vertices al grafo, y posteriormente agrega a ambos
-        diccionarios el otro v√©rtice como destino con el correspondiente peso
+        diccionarios el otro vÈrtice como destino con el correspondiente peso
 
-        Par√°metros:
+        Par·metros:
         - source: Uno de los vertices, en formato cadena (str)
         - destination: El otro vertice, en formato cadena (str)
         - weight: El peso entre ambos vertices, en formato entero (int)
@@ -82,13 +82,13 @@ class WeightedGraph:
 
     def get_vertices(self):
         """
-        Descripci√≥n:
-        Este m√©todo regresa una lista con todos los vertices del grafo.
+        DescripciÛn:
+        Este mÈtodo regresa una lista con todos los vertices del grafo.
 
-        Par√°metros:
-        - No recibe ningun par√°metro.
+        Par·metros:
+        - No recibe ningun par·metro.
 
-        Devoluci√≥n:
+        DevoluciÛn:
         El valor devuelto son los vertices del grafo.
         Es de tipo lista (list), los valores de la lista son los vertices y son de tipo cadenas (str)
         """
@@ -96,13 +96,13 @@ class WeightedGraph:
 
     def get_edges(self):
         """
-        Descripci√≥n:
-        Este m√©todo regresa una lista con todas las aristas del grafo.
+        DescripciÛn:
+        Este mÈtodo regresa una lista con todas las aristas del grafo.
 
-        Par√°metros:
-        - No recibe ningun par√°metro.
+        Par·metros:
+        - No recibe ningun par·metro.
 
-        Devoluci√≥n:
+        DevoluciÛn:
         El valor devuelto son las aristas del grafo.
         Es de tipo lista (list), los valores de la lista son las aristas y son de tipo tuplas (tuple).
         Los valores de la tupla son (origen, destino, peso); Los tipos de la tupla son (str,str,int). 
@@ -115,15 +115,15 @@ class WeightedGraph:
 
 def uniform_cost_search(graph_i, start, goal):
     """
-    Descripci√≥n:
-    Esta funci√≥n ejecuta una busqueda de costo uniforme a partir de un grafo, un vertice de inicio y un vertice de meta
+    DescripciÛn:
+    Esta funciÛn ejecuta una busqueda de costo uniforme a partir de un grafo, un vertice de inicio y un vertice de meta
 
-    Par√°metros:
+    Par·metros:
     - graph_i: Recibe una instancia de WeightedGraph
     - start: Recibe una ciudad de inicio (str)
     - end: Recibe una ciudad de llegada (str)
 
-    Devoluci√≥n:
+    DevoluciÛn:
     Devuelve una tupla con dos valores de tipo (int,str), de la forma (costo, trayectoria)
     """
     step = 0
@@ -188,14 +188,14 @@ def uniform_cost_search(graph_i, start, goal):
 
 def RomaniaFill():
     """
-    Descripci√≥n:
-    Esta funci√≥n crea un grafo graph_i y lo llena con el mapa de Rumania.
+    DescripciÛn:
+    Esta funciÛn crea un grafo graph_i y lo llena con el mapa de Rumania.
     Para usar un grafo distinto, no usar esta funcion
 
-    Par√°metros:
-    No recibe par√°metros.
+    Par·metros:
+    No recibe par·metros.
 
-    Devoluci√≥n:
+    DevoluciÛn:
     Devuelve una instancia de WeightedGraph con el grafo del mapa de Rumania.
 
     """
@@ -229,37 +229,37 @@ def RomaniaFill():
 
 def get_problem(graph_i):
     """
-    Descripci√≥n:
-    Esta funci√≥n pide al usuario que elija una ciudad de inicio y una ciudad de llegada.
+    DescripciÛn:
+    Esta funciÛn pide al usuario que elija una ciudad de inicio y una ciudad de llegada.
 
-    Par√°metros:
+    Par·metros:
     - graph_i: Recibe una instancia de WeightedGraph para verificar que los vertices pertenezcan al grafo a trabajar
 
-    Devoluci√≥n:
+    DevoluciÛn:
     Devuelve una tupla con dos valores de tipo (str,str), de la forma (ciudad_inicio, ciudad_llegada)
     """
     start_vertex = end_vertex = 'False' #This line is to simulate a do-while instead of a while
 
     #This keeps asking for a start_vertex until the vertex given is part of the vertices
     while start_vertex not in graph_i.get_vertices():
-        start_vertex = input('¬øDesde qu√© ciudad desea partir? ')
+        start_vertex = input('øDesde quÈ ciudad desea partir? ')
 
     #This keeps asking for an end_vertex until the vertex given is part of the vertices
     while end_vertex not in graph_i.get_vertices():
-        end_vertex = input('¬øA qu√© ciudad desea llegar? ')
+        end_vertex = input('øA quÈ ciudad desea llegar? ')
 
     return start_vertex, end_vertex
 
 def check_combinations(graph_i):
     """
-    Descripci√≥n:
-    Esta funci√≥n busca la trayectoria y costo de todos los pares de ciudades posibles en el grafo.
+    DescripciÛn:
+    Esta funciÛn busca la trayectoria y costo de todos los pares de ciudades posibles en el grafo.
 
-    Par√°metros:
+    Par·metros:
     - graph_i: Recibe una instancia de WeightedGraph
 
-    Devoluci√≥n:
-    No devuelve ning√∫n valor, imprime todos los resultados.
+    DevoluciÛn:
+    No devuelve ning˙n valor, imprime todos los resultados.
     """
     city_pairs = get_city_pairs(graph_i.get_vertices())
     print("Pares de ciudades:")
@@ -269,7 +269,7 @@ def check_combinations(graph_i):
         print()
         print(pair)
         #Notemos que revisa en ambos ordenes (de A a B y de B a A)
-        #porque el algoritmo explora aristas distintas dependiendo de la direcci√≥n 
+        #porque el algoritmo explora aristas distintas dependiendo de la direcciÛn 
 
         #Revisa de la ciudad0 a la ciudad1
         cost,path = uniform_cost_search(graph_i,pair[0],pair[1])
@@ -289,13 +289,13 @@ def check_combinations(graph_i):
 
 def get_city_pairs(city_list):
     """
-    Descripci√≥n:
-    Esta funci√≥n genera todas las combinaciones posibles que tengan 2 elementos
+    DescripciÛn:
+    Esta funciÛn genera todas las combinaciones posibles que tengan 2 elementos
 
-    Par√°metros:
+    Par·metros:
     - city_list: Una lista de todos los vertices de un grafo
 
-    Devoluci√≥n:
+    DevoluciÛn:
     Devuelve una lista (list) cuyos valores son tuplas (tuple) con dos elementos (ciudad1, ciudad2) de tipos (str,str)
     """
 
@@ -310,13 +310,13 @@ FLAG_PRINT = True
 
 def main():     # The graph instance used is the RomaniaFill() and asks for two cities
     """
-    Descripci√≥n:
-    Esta funci√≥n usa el grafo de Rumania y pregunta por dos ciudades, ejecuta la busqueda paso a paso
+    DescripciÛn:
+    Esta funciÛn usa el grafo de Rumania y pregunta por dos ciudades, ejecuta la busqueda paso a paso
 
-    Par√°metros:
+    Par·metros:
     Nada.
 
-    Devoluci√≥n:
+    DevoluciÛn:
     Nada.
     """
 
@@ -336,15 +336,15 @@ def main():     # The graph instance used is the RomaniaFill() and asks for two 
 
 def try_out():
     """
-    Descripci√≥n:
-    Esta funci√≥n usa el grafo de Rumania.
+    DescripciÛn:
+    Esta funciÛn usa el grafo de Rumania.
     Permite buscar entre dos ciudades o buscar entre todos los pares de ciudades,
-    Tambi√©n permite buscar con la bandera FLAG_PRINT en True o en False
+    TambiÈn permite buscar con la bandera FLAG_PRINT en True o en False
 
-    Par√°metros:
+    Par·metros:
     Nada.
 
-    Devoluci√≥n:
+    DevoluciÛn:
     Nada.
     """
 
